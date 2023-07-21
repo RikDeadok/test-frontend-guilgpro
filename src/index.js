@@ -42,15 +42,15 @@ function generateTimelineData() {
       timelineData.push(monthData);
     }
 
-    let weekData = monthData.weeks.find((item) => item[`${week} week`]);
+    let weekData = monthData.weeks.find((item) => item[`${week} неделя`]);
     if (!weekData) {
       weekData = {
-        [`${week} week`]: []
+        [`${week} неделя`]: []
       };
       monthData.weeks.push(weekData);
     }
 
-    weekData[`${week} week`].push(day);
+    weekData[`${week} неделя`].push(day);
 
     currentDate.setDate(currentDate.getDate() + 1);
   }
@@ -125,10 +125,36 @@ const checkFunctionFunk = document.getElementById('checkFunctionFunk');
 const callbackFunctionFunk = document.getElementById('callbackFunctionFunk');
 const checkAndExecuteFunk = document.getElementById('checkAndExecuteFunk');
 
-checkAndExecuteFunc.textContent = `function ${checkAndExecute}`;
-checkFunctionFunk.textContent = `function ${checkFunction}`;
-callbackFunctionFunk.textContent = `function ${callbackFunction}`;
-checkAndExecuteFunk.textContent = `${checkAndExecute}`;
+checkAndExecuteFunc.textContent = `function checkAndExecute(checkFunction, callbackFunction, options = {}) {
+  const frequency = options.frequency || 1000;
+  const timeout = options.timeout || 5000;
+
+  let elapsedTime = 0;
+  const intervalId = setInterval(() => {
+    const result = checkFunction();
+    elapsedTime += frequency;
+
+    if (result === true) {
+      clearInterval(intervalId);
+      callbackFunction();
+    } else if (elapsedTime >= timeout) {
+      clearInterval(intervalId);
+      console.log('Максимальное время ожидания. Нет значений больше 0,8');
+    }
+  }, frequency);
+}`;
+checkFunctionFunk.textContent = `function checkFunction() {
+  const randomNumber = Math.random();
+  console.log(randomNumber);
+  return randomNumber > 0.8;
+}`;
+callbackFunctionFunk.textContent = `function callbackFunction() {
+  console.log('Функция поймала значение больше 0.8!');
+}`;
+checkAndExecuteFunk.textContent = `checkAndExecute(checkFunction, callbackFunction, {
+  frequency: 2000,
+  timeout: 10000,
+});`;
 
 Prism.highlightElement(checkAndExecuteFunc);
 Prism.highlightElement(checkFunctionFunk);
