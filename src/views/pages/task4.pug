@@ -1,0 +1,135 @@
+extends ../layouts/second
+
+block variables
+    - let title = "guildPRO"
+    - let description = "test-front"
+
+block content
+
+    <div class="_image-bg">
+        <div class="section section_vertical _container">
+            <div class="section__body my-slider">
+                <div class="my-slider__wrapper">
+                    - for (let i = 0; i < 3; i++)
+                        <div class="my-slider__slide">
+                            <div class="main-title">Бухгалтерские услуги<br>в Санкт-Петербурге</div>
+                            <button class="main-button button">Наша презентация</button>
+                        </div>
+                </div>
+                <div class="my-slider__navigation">
+                    <div class="my-slider__pagination"></div>
+                    <div class="my-slider__button-prev"><div class="_icon-arrow-back"></div></div>
+                    <div class="my-slider__button-next"><div class="_icon-arrow-forward"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="_dark-bg">
+        <div class="section section_vertical _container">
+            <div class="section__head">
+                <div class="section__sub-title">Наши услуги</div>
+                <div class="section__title">Мы специализируемся</div>
+            </div>
+            <div class="section__body service-cards">
+                - for (let i = 0; i < 6; i++)
+                    <div class="service-cards__item">
+                        -let j = 1
+                        - if (i < j)
+                            <div class="filter"></div>
+                            <p>Бухгалтерское<br>обслуживание</p>
+                        - else 
+                            <p>Бухгалтерское<br>обслуживание</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="_light-bg">
+        <div class="section section_gorizontal _container">
+            <div class="section__head">
+                <div class="section__sub-title">О нас</div>
+                <div class="section__title">Компания <span class="_accent-color">ИвановПром</span></div>
+                <div class="section__description">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.</div>
+            </div>
+            <div class="section__body about-cards">
+                - for (let i = 0; i < 4; i++)
+                    <div class="about-cards__item card-about">
+                        <div class="card-about__score">90</div>
+                        <div class="card-about__title">Завершено крупных сделок</div>
+                        <div class="card-about__link">Все кейсы</div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="_dark-bg">
+        <div class="section section_vertical _container">
+            <div class="section__head">
+                <div class="section__sub-title">Наши клиенты</div>
+                <div class="section__title">С нами работают</div>
+            </div>
+            <div class="section__body my-slider">
+                <div class="my-slider__wrapper">
+                    - for (let i = 0; i < 4; i++)
+                        <div class="my-slider__slide">
+                            <div class="client-cards">
+                                - for (let i = 0; i < 4; i++)
+                                    img(src=require('/src/assets/img/our_client.png'), alt='photo')
+                            </div>
+                        </div>
+                </div>
+                <div class="my-slider__navigation accent-navigation">
+                    <div class="my-slider__pagination"></div>
+                    <div class="my-slider__button-prev"><div class="_icon-arrow-back"></div></div>
+                    <div class="my-slider__button-next"><div class="_icon-arrow-forward"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="_light-bg">
+        <div class="section section_vertical _container">
+            <div class="section__head">
+                <div class="section__sub-title">Отзывы</div>
+                <div class="section__title">Ваши благодарности</div>
+            </div>
+            <div class="section__body my-slider">
+                <div class="my-slider__wrapper">
+                    - for (let i = 0; i < 4; i++)
+                        <div class="my-slider__slide">
+                            <div class="card-review">
+                                <div class="card-review__message">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</div>
+                                <div class="card-review__info">
+                                    <div class="card-review__image">
+                                        img(src=require('/src/assets/img/photo.png'), alt='photo')
+                                    </div>
+                                    <div class="card-review__name">Екатерина Иванова</div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="my-slider__navigation accent-navigation">
+                    <div class="my-slider__pagination"></div>
+                    <div class="my-slider__button-prev"><div class="_icon-arrow-back"></div></div>
+                    <div class="my-slider__button-next"><div class="_icon-arrow-forward"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>

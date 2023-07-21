@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'icons';
+  src: url('/src/assets/fonts/MaterialIcons-Regular.ttf');
+  font-display: block;
+}
+%ic {
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+[class^="_icon-"],
+[class*=" _icon-"] {
+  &:before {
+    @extend %ic;
+    display: block;
+  }
+}
+._icon-arrow-back:before {
+  content: "\e5e0";
+}
+._icon-arrow-forward:before {
+  content: "\e5e1";
+}
+._icon-burger:before {
+  content: "\e5d2";
+}
+._icon-cross:before {
+  content: "\e5cd";
+}
+._icon-mobile:before {
+  content: "\e325";
+}
+._icon-clock:before {
+  content: "\e8b5";
+}
+._icon-mail:before {
+  content: "\e158";
+}
+._icon-location:before {
+  content: "\e0c8";
+}
+._icon-dropdown:before {
+  content: "\e5c5";
+}

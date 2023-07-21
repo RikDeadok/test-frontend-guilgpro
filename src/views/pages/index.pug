@@ -1,0 +1,154 @@
+extends ../layouts/main
+
+block variables
+    - let title = "Tasks"
+    - let description = "test-js"
+
+block content
+
+    <div class="section section_vertical _container">
+        <div class="section__head">
+            <div class="section__sub-title">Первое задание</div>
+            <div class="section__title">Построение сетки</div>
+            <div class="section__description">
+                <p>За идею взял сетку как bootstrap, с использованием строк и колонок. Получилась простая гибкая переиспользуемая сетка на flex-box.</p>
+                <p>_container - для создания оболочки по брикпоинтам</p>
+                <p>_row - как основной родительский элемент сетки</p>
+                <p>_column - устанавливается в _row </p>
+            </div>
+        </div>
+        <div class="section__body">
+            include ../partials/grid
+        </div>
+    </div>
+
+
+
+
+
+    <div class="section section_vertical _container">
+        <div class="section__head">
+            <div class="section__sub-title">Второе задание</div>
+            <div class="section__title">Работа с js Выпадающие списки</div>
+            <div class="section__description">Структура этого проекта:</div>
+        </div>
+        <div class="section__body">
+            include ../partials/dropdown
+        </div>
+    </div>
+
+
+
+
+
+    <div class="section section_vertical">
+        <div class="section__head _container">
+            <div class="section__sub-title">Третье задание</div>
+            <div class="section__title">Работа с js Построить временную шкалу</div>
+            <div class="section__description">
+                <p>Самое сложное задание по моему мнению</p>
+                <p>Неделя начинается с воскресенья, не смог это побороть</p>
+            </div>
+        </div>
+        <div class="section__body timeline">
+            <div class="timeline__nav time-nav _container">
+                <div class="time-nav__title">Выберите год и квартал:</div>
+                <select class="time-nav__input" name="quarter">
+                    <option value="1">I квартал</option>
+                    <option value="2">II квартал</option>
+                    <option value="3">III квартал</option>
+                    <option value="4">IV квартал</option>
+                </select>
+                <input class="time-nav__input" name="year" type="number" placeholder="Год">
+                <button class="time-nav__button button">Отобразить</button>
+            </div>
+            <div class="timeline__container _my-grid"></div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="section section_vertical _container">
+        <div class="section__head">
+            <div class="section__sub-title">Четвертое задание</div>
+            <div class="section__title">Верстка</div>
+            <div class="section__description"><a href="https://www.figma.com/file/BKskkMHpVfnTcrqj4aEFhS/Templates-6.-More-on-Figma.info-Copy">Ссылка на макет</a></div>
+        </div>
+        <div class="section__body">
+            <a class="layout-link" href="http://localhost:8081/task4.html">Верстка находится тут...</a>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="section section_vertical _container">
+        <div class="section__head">
+            <div class="section__sub-title">Пятое задание</div>
+            <div class="section__title">Функция</div>
+            <div class="section__description">
+                <p>Для того чтобы увидеть работу функции, нажмите <b>F12</b> и перейдите в консоль, при необходимости перезагрузите страницу.</p>
+                <p>Интервал: 2 секунды</p>
+                <p>Макс. время ожидания: 10 секунд</p>
+                <p>Ожидаемый результат: больше 0.8</p>
+            </div>
+            <div class="section__body">
+                <pre><code class="language-javascript" id="checkAndExecuteFunc"></code></pre>
+                <pre><code class="language-javascript" id="checkFunctionFunk"></code></pre>
+                <pre><code class="language-javascript" id="callbackFunctionFunk"></code></pre>
+                <pre><code class="language-javascript" id="checkAndExecuteFunk"></code></pre>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="section section_vertical _container">
+        <div class="section__head">
+            <div class="section__sub-title">Шестое задание</div>
+            <div class="section__title">Drag'n'Drop</div>
+            <div class="section__description">Выставите ползунки на нужные интервалы и нажмите кнопку</div>
+        </div>
+        <div class="section__body scale">
+            <div class="scale__container">
+                <div class="scale__unit" id="scale-unit-1" data-value="1">1<div class="scale__slider" id="scale-slider-1" draggable="true"></div></div>
+                <div class="scale__unit" id="scale-unit-2" data-value="2">2</div>
+                <div class="scale__unit" id="scale-unit-3" data-value="3">3</div>
+                <div class="scale__unit" id="scale-unit-4" data-value="4">4</div>
+                <div class="scale__unit" id="scale-unit-5" data-value="5">5</div>
+                <div class="scale__unit" id="scale-unit-6" data-value="6">6</div>
+                <div class="scale__unit" id="scale-unit-7" data-value="7">7</div>
+                <div class="scale__unit" id="scale-unit-8" data-value="8">8</div>
+                <div class="scale__unit" id="scale-unit-9" data-value="9">9</div>
+                <div class="scale__unit" id="scale-unit-10" data-value="10">10</div>
+                <div class="scale__unit" id="scale-unit-11" data-value="11">11</div>
+                <div class="scale__unit" id="scale-unit-12" data-value="12">12</div>
+                <div class="scale__unit" id="scale-unit-13" data-value="13">13</div>
+                <div class="scale__unit" id="scale-unit-14" data-value="14">14</div>
+                <div class="scale__unit" id="scale-unit-15" data-value="15">15</div>
+            </div>
+            <div class="scale__container">
+                <div class="scale__unit" id="scale-unit-1" data-value="1">1<div class="scale__slider" id="scale-slider-2" draggable="true"></div></div>
+                <div class="scale__unit" id="scale-unit-2" data-value="2">2</div>
+                <div class="scale__unit" id="scale-unit-3" data-value="3">3</div>
+                <div class="scale__unit" id="scale-unit-4" data-value="4">4</div>
+                <div class="scale__unit" id="scale-unit-5" data-value="5">5</div>
+                <div class="scale__unit" id="scale-unit-6" data-value="6">6</div>
+                <div class="scale__unit" id="scale-unit-7" data-value="7">7</div>
+                <div class="scale__unit" id="scale-unit-8" data-value="8">8</div>
+                <div class="scale__unit" id="scale-unit-9" data-value="9">9</div>
+                <div class="scale__unit" id="scale-unit-10" data-value="10">10</div>
+                <div class="scale__unit" id="scale-unit-11" data-value="11">11</div>
+                <div class="scale__unit" id="scale-unit-12" data-value="12">12</div>
+                <div class="scale__unit" id="scale-unit-13" data-value="13">13</div>
+                <div class="scale__unit" id="scale-unit-14" data-value="14">14</div>
+                <div class="scale__unit" id="scale-unit-15" data-value="15">15</div>
+            </div>
+            <button class="scale__button">Отсчёт!</button>
+        </div>
+    </div>

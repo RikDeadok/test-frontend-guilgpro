@@ -1,0 +1,66 @@
+.my-slider {
+  position: relative;
+  overflow: hidden;
+}
+.my-slider__wrapper {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+.my-slider__slide {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  height: auto;
+}
+.my-slider__navigation {
+  margin-top: 50px;
+  display: flex;
+}
+.my-slider__pagination {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-right: auto;
+}
+.my-slider__pagination-item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: .4;
+  margin: 0 15px;
+  cursor: pointer;
+}
+.my-slider__pagination-item.active {
+  opacity: 1;
+}
+.my-slider__button-prev,
+.my-slider__button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(#ffffff, 0.2);
+  transition: all .5s;
+  cursor: pointer;
+}
+.my-slider__button-prev:hover,
+.my-slider__button-next:hover {
+  background-color: rgba(#ffffff, 0.4);
+}
+.accent-navigation .my-slider__pagination-item {
+  background-color: $mainColor;
+  opacity: .4;
+}
+.accent-navigation .my-slider__pagination-item.active {
+  opacity: 1;
+}
+.accent-navigation .my-slider__button-prev,
+.accent-navigation .my-slider__button-next {
+  background-color: rgba($mainColor, 0.2);
+}
+.accent-navigation .my-slider__button-prev:hover,
+.accent-navigation .my-slider__button-next:hover {
+  background-color: $mainColor;
+}

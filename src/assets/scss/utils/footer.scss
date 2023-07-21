@@ -1,0 +1,107 @@
+.footer {
+  &__body {
+    padding-top: 122px;
+    padding-bottom: 140px;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    @media (max-width: $md2 + px) {
+      flex-direction: column;
+    }
+  }
+  &__item-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.info-footer {
+  color: #ffffff;
+  &__title {
+    width: 100%;
+    font-family: $fontTitle;
+    font-size: 48px;
+    margin-bottom:60px;
+  }
+  &__description {
+    width: 100%;
+    margin-bottom:80px;
+  }
+  &__phone {
+    display: flex;
+  }
+  &__email {
+    display: flex;
+  }
+}
+.form-footer {
+  &__item {
+    flex: 1;
+  }
+  &__button {
+    margin-left: auto;
+  }
+}
+.text-field {
+  display: flex;
+  flex-direction: column;
+  &__label {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  &__input {
+    padding: 15px 0;
+    background: none;
+    border-bottom: solid 1px #ffffff;
+    font-size: 18px;
+    color: #ffffff;
+    outline: none;
+  }
+  &__input:focus {
+    border-bottom: solid 1px $mainColor;
+  }
+  ._error {
+    border-bottom: solid 1px red;
+  }
+}
+.text-area {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+  margin-bottom: 50px;
+  &__label {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  &__input {
+    padding: 15px 0;
+    min-height: 120px;
+    background: none;
+    border-bottom: solid 1px #ffffff;
+    font-size: 18px;
+    color: #ffffff;
+    outline: none;
+  }
+  &__input:focus {
+    border-bottom: solid 1px $mainColor;
+  }
+  ._error {
+    border-bottom: solid 1px red;
+  }
+}
+.signature {
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,121 @@
+.header {
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    z-index: 50;
+    background: $lightbg;
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 80px;
+  }
+  &__logo {
+    padding-right: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 0 0 calc(380/1160 * 100%);
+    position: relative;
+    font-family: $fontTitle;
+    font-size: 36px;
+    line-height: 1.5;
+    color: $mainColor;
+  }
+  &__item-group {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    transition: all .7s;
+    @media (max-width: $md3 + px) {
+      position: fixed;
+      top: -400px;
+      left: 0;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      background: #ffffff;
+      padding: 70px 15px 15px;
+    }
+  }
+  &__item-group.active {
+    top: 0;
+  }
+  &__info {
+    width: 100%;
+    height: 50%;
+  }
+  .info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+    @media (max-width: $md3 + px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      gap:15px;
+    }
+    &__icon {
+      color: $mainColor;
+    }
+    &__text {
+      font-family: $fontLight;
+      font-size: 14px;
+      color: #000000;
+      text-wrap: nowrap;
+    }
+  }
+  &__menu {
+    width: 100%;
+    height: 50%;
+  }
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+    @media (max-width: $md3 + px) {
+      flex-direction: column;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+    }
+    &__link {
+      font-family: $fontBold;
+      font-size: 14px;
+      color: #222222;
+      text-transform: uppercase;
+    }
+  }
+  .burger-button {
+    display: none;
+    @media (max-width: $md3 + px) {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      display: flex;
+      font-size: 48px;
+      color: $mainColor;
+    }
+  }
+  .cross-button {
+    display: none;
+    @media (max-width: $md3 + px) {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: flex;
+      font-size: 48px;
+      color: $mainColor;
+    }
+  }
+}

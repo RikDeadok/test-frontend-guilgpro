@@ -1,0 +1,18 @@
+block variables
+
+doctype html
+html(lang='en')
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="initial-scale=1.0, width=device-width")
+        meta(name="keywords" content="js")
+        meta(name="description", content=description)
+        title #{title}
+    body
+        include ../partials/header
+        <div class="wrapper">
+            <div class="content">
+                block content
+            </div>
+        </div>
+        include ../partials/footer
