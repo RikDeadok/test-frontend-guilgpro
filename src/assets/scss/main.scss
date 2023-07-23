@@ -269,6 +269,7 @@ body {
     display: flex;
     flex-direction: row;
     flex: 1;
+    flex-wrap: wrap;
   }
   ._column {
     display: flex;
@@ -333,6 +334,7 @@ table.horisontal td {
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 15px;
     .time-nav {
       &__title {
@@ -340,11 +342,12 @@ table.horisontal td {
       }
       &__input {
         padding: 10px 25px;
-        min-width: 300px;
+        min-width: 260px;
+        height: 50px;
         border: 1px solid #dee2e6;
       }
       &__button{
-        
+        height: 50px;
       }
     }
   }
@@ -405,13 +408,16 @@ table.horisontal td {
 }
 
 .scale {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
   &__container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 10px;
+    gap: 1px;
   }
   &__slider {
     position: absolute;
